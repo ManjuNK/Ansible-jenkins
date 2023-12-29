@@ -30,7 +30,7 @@ resource "aws_security_group" "Jenkins-sg" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0faab6bdbac9486fb"
+  ami                    = "ami-0d118c6e63bcb554e"
   instance_type          = "t2.medium"
   key_name               = "key_file"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
@@ -39,5 +39,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = "Jenkins-Terraform"
   }
- 
+  root_block_device {
+    volume_size = 8
+  }
 }
