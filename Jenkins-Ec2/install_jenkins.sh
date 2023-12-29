@@ -9,5 +9,5 @@ sudo apt install git -y
 mkdir Ansible && cd Ansible
 pwd
 git clone git@github.com:ManjuNK/Ansible-jenkins.git
-cd ANSIBLE
-ansible-playbook -i localhost Jenkins.yml
+cd Ansible-jenkins
+ansible-playbook -i localhost Jenkins-playbook.yml
