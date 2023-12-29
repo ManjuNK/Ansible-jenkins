@@ -39,7 +39,5 @@ resource "aws_instance" "web" {
   tags = {
     Name = "Jenkins-Terraform"
   }
-  root_block_device {
-    volume_size = 8
-  }
+ 
 }
